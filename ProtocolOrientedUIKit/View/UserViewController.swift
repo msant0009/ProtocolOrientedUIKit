@@ -7,6 +7,8 @@
 
 import UIKit
 
+class UserViewController: UIViewController {
+
 private let nameLabel : UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,18 +31,21 @@ private let usernameLabel : UILabel = {
 }()
 
 
-class UserViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViews()
         
+        fetchUsers()
+        
+        
         
     }
 
     
-    func setupViews() {
+    private func setupViews() {
         view.backgroundColor = .yellow
         
         view.addSubview(emailLabel)
@@ -75,5 +80,20 @@ class UserViewController: UIViewController {
         
     }
 
+    private func fetchUsers() {
+        APIManager.shared.fetchUser {result in
+            switch result {
+            case .success(let user):
+                self.usernameLabel.text = user.username
+                self.emailLabel.text = user.email
+                self.nameLabel.text = user.name
+                
+            case .failure :
+                self.nameLabel.text = "No user found"
+            }
+        }
+    }
+    
+    
 }
 
