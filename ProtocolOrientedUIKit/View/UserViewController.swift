@@ -8,41 +8,51 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    
+    private let viewModel : UserViewModel
 
-private let nameLabel : UILabel = {
-    let label = UILabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.textAlignment = .center
-    return label
-}()
+    private let nameLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        return label
+    }()
 
-private let emailLabel : UILabel = {
-    let label = UILabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.textAlignment = .center
-    return label
-}()
+    private let emailLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        return label
+    }()
 
-private let usernameLabel : UILabel = {
-    let label = UILabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.textAlignment = .center
-    return label
-}()
+    private let usernameLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        return label
+    }()
 
-
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupViews()
+        init(viewModel: UserViewModel) {
+            self.viewModel = viewModel
+            super.init(nibName: nil, bundle: nil)
+            
+        }
         
-        fetchUsers()
-        
-        
-        
-    }
+        required init?(coder: NSCoder) {
+            fatalError("init(Coder:) has not been implemented")
+        }
+
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            setupViews()
+            
+        //    fetchUsers()
+            
+            
+            
+        }
 
     
     private func setupViews() {
@@ -80,19 +90,20 @@ private let usernameLabel : UILabel = {
         
     }
 
-    private func fetchUsers() {
-        APIManager.shared.fetchUser {result in
-            switch result {
-            case .success(let user):
-                self.usernameLabel.text = user.username
-                self.emailLabel.text = user.email
-                self.nameLabel.text = user.name
-                
-            case .failure :
-                self.nameLabel.text = "No user found"
-            }
-        }
-    }
+    
+//    private func fetchUsers() {
+//        APIManager.shared.fetchUser {result in
+//            switch result {
+//            case .success(let user):
+//                self.usernameLabel.text = user.username
+//                self.emailLabel.text = user.email
+//                self.nameLabel.text = user.name
+//                
+//            case .failure :
+//                self.nameLabel.text = "No user found"
+//            }
+//        }
+//    }
     
     
 }

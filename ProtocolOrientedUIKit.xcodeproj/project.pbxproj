@@ -17,6 +17,8 @@
 		A32ABCCF2C924FFF00738F04 /* ProtocolOrientedUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABCCE2C924FFF00738F04 /* ProtocolOrientedUIKitUITestsLaunchTests.swift */; };
 		A32ABCE02C9256F200738F04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABCDF2C9256F200738F04 /* User.swift */; };
 		A32ABCE22C92579B00738F04 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABCE12C92579B00738F04 /* APIManager.swift */; };
+		A32ABCE52C926DF100738F04 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABCE42C926DF100738F04 /* UserViewModel.swift */; };
+		A32ABCE72C926E9800738F04 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABCE62C926E9800738F04 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A32ABCCE2C924FFF00738F04 /* ProtocolOrientedUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A32ABCDF2C9256F200738F04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A32ABCE12C92579B00738F04 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A32ABCE42C926DF100738F04 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A32ABCE62C926E9800738F04 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		A32ABCAA2C924FFE00738F04 /* ProtocolOrientedUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A32ABCE32C926DDE00738F04 /* ViewModel */,
 				A32ABCDE2C92569600738F04 /* Model */,
 				A32ABCDD2C92568C00738F04 /* Service */,
 				A32ABCDB2C92566500738F04 /* View */,
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A32ABCE12C92579B00738F04 /* APIManager.swift */,
+				A32ABCE62C926E9800738F04 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -152,6 +158,14 @@
 				A32ABCDF2C9256F200738F04 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A32ABCE32C926DDE00738F04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A32ABCE42C926DF100738F04 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32ABCE72C926E9800738F04 /* UserService.swift in Sources */,
 				A32ABCE02C9256F200738F04 /* User.swift in Sources */,
+				A32ABCE52C926DF100738F04 /* UserViewModel.swift in Sources */,
 				A32ABCB02C924FFE00738F04 /* UserViewController.swift in Sources */,
 				A32ABCE22C92579B00738F04 /* APIManager.swift in Sources */,
 				A32ABCAC2C924FFE00738F04 /* AppDelegate.swift in Sources */,
