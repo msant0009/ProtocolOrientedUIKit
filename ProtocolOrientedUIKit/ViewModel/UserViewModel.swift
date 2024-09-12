@@ -23,7 +23,7 @@ class UserViewModel {
             switch result {
             case .success(let user):
                 self?.output?.updateView(name: user.name, email: user.email, userName: user.username)
-            case .failure :
+            case .failure(_):
                 self?.output?.updateView(name: "no User Found", email: "", userName: "")
                 
             }

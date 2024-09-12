@@ -92,9 +92,9 @@ class UserViewController: UIViewController, UserViewModelOutput {
         
         ])
         
-        nameLabel.text = "Name"
-        emailLabel.text = "email"
-        usernameLabel.text = "UserName"
+//        nameLabel.text = "Name"
+//        emailLabel.text = "email"
+//        usernameLabel.text = "UserName"
         
         
     }
